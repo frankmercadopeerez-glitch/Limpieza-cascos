@@ -36,8 +36,51 @@
             <a href="about.html" class="nav__link">Nosotros</a>
             <a href="index.html#cobertura" class="nav__link">Cobertura</a>
             <a href="index.html#faq" class="nav__link">FAQ</a>
+            <div class="lang-selector">
+              <button
+                class="lang-btn"
+                id="langBtn"
+                aria-label="Seleccionar idioma"
+              >
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="2" y1="12" x2="22" y2="12" />
+                  <path
+                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                  />
+                </svg>
+                <span id="activeLang">ES</span>
+                <svg
+                  width="9"
+                  height="9"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="lang-dropdown" id="langDropdown">
+                <a href="#" class="lang-option" data-lang="es">ES — Español</a>
+                <a href="#" class="lang-option" data-lang="en">EN — English</a>
+                <a href="#" class="lang-option" data-lang="fr">FR — Français</a>
+                <a href="#" class="lang-option" data-lang="it">IT — Italiano</a>
+              </div>
+            </div>
             <a
-              href="https://wa.me/573006394572?text=Hola%20Santiago%2C%20vi%20vuestra%20web%20y%20quiero%20información%20sobre%20limpieza%20de%20casco%20para%20mi%20embarcación"
+              href="https://wa.me/34611273268?text=Hola%20Santiago%2C%20vi%20vuestra%20web%20y%20quiero%20información%20sobre%20limpieza%20de%20casco%20para%20mi%20embarcación"
               target="_blank"
               rel="noopener noreferrer"
               class="nav__cta"
@@ -58,7 +101,7 @@
       <a href="index.html#cobertura">Cobertura</a>
       <a href="index.html#faq">Preguntas</a>
       <a
-        href="https://wa.me/573006394572?text=Hola%20Santiago%2C%20vi%20vuestra%20web%20y%20quiero%20información%20sobre%20limpieza%20de%20casco%20para%20mi%20embarcación"
+        href="https://wa.me/34611273268?text=Hola%20Santiago%2C%20vi%20vuestra%20web%20y%20quiero%20información%20sobre%20limpieza%20de%20casco%20para%20mi%20embarcación"
         target="_blank"
         rel="noopener noreferrer"
         class="mobile-cta"
@@ -420,7 +463,7 @@
             <h3>Responsable del tratamiento</h3>
             <p>
               Santiago Rodríguez Pineda — Valencia, España — Contacto: a través
-              de WhatsApp +57 300 639 4572.
+              de WhatsApp +34 611 273 268.
             </p>
             <h3>Datos que tratamos</h3>
             <p>
@@ -568,7 +611,7 @@
                 ¿Tienes dudas sobre estos términos o nuestra política de
                 privacidad?<br />
                 <a
-                  href="https://wa.me/573006394572?text=Hola%20Santiago%2C%20tengo%20una%20pregunta%20sobre%20los%20términos%20y%20condiciones%20de%20vuestro%20servicio"
+                  href="https://wa.me/34611273268?text=Hola%20Santiago%2C%20tengo%20una%20pregunta%20sobre%20los%20términos%20y%20condiciones%20de%20vuestro%20servicio"
                   target="_blank"
                   rel="noopener noreferrer"
                   style="color: var(--gold); font-weight: 600"
@@ -625,10 +668,10 @@
             <ul class="footer__links">
               <li>
                 <a
-                  href="https://wa.me/573006394572"
+                  href="https://wa.me/34611273268"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >+57 300 639 4572</a
+                  >+34 611 273 268</a
                 >
               </li>
               <li><span>Valencia, España</span></li>
@@ -650,7 +693,7 @@
     </footer>
 
     <a
-      href="https://wa.me/573006394572?text=Hola%20Santiago%2C%20vi%20vuestra%20web%20y%20quiero%20información%20sobre%20limpieza%20de%20casco%20para%20mi%20embarcación"
+      href="https://wa.me/34611273268?text=Hola%20Santiago%2C%20vi%20vuestra%20web%20y%20quiero%20información%20sobre%20limpieza%20de%20casco%20para%20mi%20embarcación"
       target="_blank"
       rel="noopener noreferrer"
       class="whatsapp-float"
@@ -665,5 +708,20 @@
     </a>
 
     <script src="js/main.js"></script>
+    <!-- Google Translate (controlled by lang selector) -->
+    <div id="google_translate_element" style="display: none"></div>
+    <script>
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "es",
+            includedLanguages: "es,en,fr,it",
+            autoDisplay: false,
+          },
+          "google_translate_element",
+        );
+      }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </body>
 </html>

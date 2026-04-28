@@ -38,8 +38,51 @@
             <a href="about.html" class="nav__link">Nosotros</a>
             <a href="index.html#cobertura" class="nav__link">Cobertura</a>
             <a href="index.html#faq" class="nav__link">FAQ</a>
+            <div class="lang-selector">
+              <button
+                class="lang-btn"
+                id="langBtn"
+                aria-label="Seleccionar idioma"
+              >
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="2" y1="12" x2="22" y2="12" />
+                  <path
+                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                  />
+                </svg>
+                <span id="activeLang">ES</span>
+                <svg
+                  width="9"
+                  height="9"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="lang-dropdown" id="langDropdown">
+                <a href="#" class="lang-option" data-lang="es">ES — Español</a>
+                <a href="#" class="lang-option" data-lang="en">EN — English</a>
+                <a href="#" class="lang-option" data-lang="fr">FR — Français</a>
+                <a href="#" class="lang-option" data-lang="it">IT — Italiano</a>
+              </div>
+            </div>
             <a
-              href="https://wa.me/573006394572?text=Hola%20Santiago%2C%20vi%20vuestra%20web%20y%20quiero%20información%20sobre%20limpieza%20de%20casco%20para%20mi%20embarcación"
+              href="https://wa.me/34611273268?text=Hola%20Santiago%2C%20vi%20vuestra%20web%20y%20quiero%20información%20sobre%20limpieza%20de%20casco%20para%20mi%20embarcación"
               target="_blank"
               rel="noopener noreferrer"
               class="nav__cta"
@@ -60,7 +103,7 @@
       <a href="index.html#cobertura">Cobertura</a>
       <a href="index.html#faq">Preguntas</a>
       <a
-        href="https://wa.me/573006394572?text=Hola%20Santiago%2C%20vi%20vuestra%20web%20y%20quiero%20información%20sobre%20limpieza%20de%20casco%20para%20mi%20embarcación"
+        href="https://wa.me/34611273268?text=Hola%20Santiago%2C%20vi%20vuestra%20web%20y%20quiero%20información%20sobre%20limpieza%20de%20casco%20para%20mi%20embarcación"
         target="_blank"
         rel="noopener noreferrer"
         class="mobile-cta"
@@ -294,7 +337,7 @@
             </div>
 
             <a
-              href="https://wa.me/573006394572?text=Hola%20Santiago%2C%20quiero%20presupuesto%20para%20una%20limpieza%20de%20casco"
+              href="https://wa.me/34611273268?text=Hola%20Santiago%2C%20quiero%20presupuesto%20para%20una%20limpieza%20de%20casco"
               target="_blank"
               rel="noopener noreferrer"
               class="btn btn--primary"
@@ -326,9 +369,9 @@
           <h2 class="section__title">Precio según eslora</h2>
           <div class="divider"></div>
           <p class="section__sub">
-            Precios orientativos + IVA. La suscripción mensual incluye descuento
-            sobre el precio de servicio puntual. Desplazamientos fuera de
-            Valencia capital bajo consulta.
+            Precios orientativos. La suscripción mensual incluye descuento sobre
+            el precio de servicio puntual. Desplazamientos fuera de Valencia
+            capital bajo consulta.
           </p>
         </div>
 
@@ -355,57 +398,57 @@
                 <td><span class="size-label">≤ 25 pies</span></td>
                 <td>Lancha, velero pequeño</td>
                 <td>45–60 min</td>
+                <td><span class="price">€95</span></td>
                 <td><span class="price">€80</span></td>
-                <td><span class="price">€65</span></td>
               </tr>
               <tr>
                 <td><span class="size-label">26 – 30 pies</span></td>
                 <td>Velero o yate pequeño</td>
                 <td>60–80 min</td>
+                <td><span class="price">€130</span></td>
                 <td><span class="price">€110</span></td>
-                <td><span class="price">€90</span></td>
               </tr>
               <tr>
                 <td><span class="size-label">31 – 35 pies</span></td>
                 <td>Velero mediano</td>
                 <td>75–95 min</td>
-                <td><span class="price">€130</span></td>
-                <td><span class="price">€105</span></td>
+                <td><span class="price">€155</span></td>
+                <td><span class="price">€125</span></td>
               </tr>
               <tr>
                 <td><span class="size-label">36 – 40 pies</span></td>
                 <td>Velero / yate mediano</td>
                 <td>90–120 min</td>
-                <td><span class="price">€165</span></td>
-                <td><span class="price">€135</span></td>
+                <td><span class="price">€200</span></td>
+                <td><span class="price">€160</span></td>
               </tr>
               <tr>
                 <td><span class="size-label">41 – 45 pies</span></td>
                 <td>Yate o catamarán mediano</td>
                 <td>110–140 min</td>
-                <td><span class="price">€190</span></td>
-                <td><span class="price">€155</span></td>
+                <td><span class="price">€230</span></td>
+                <td><span class="price">€185</span></td>
               </tr>
               <tr>
                 <td><span class="size-label">46 – 50 pies</span></td>
                 <td>Yate grande</td>
                 <td>130–160 min</td>
-                <td><span class="price">€225</span></td>
-                <td><span class="price">€185</span></td>
+                <td><span class="price">€270</span></td>
+                <td><span class="price">€220</span></td>
               </tr>
               <tr>
                 <td><span class="size-label">51 – 60 pies</span></td>
                 <td>Yate grande / catamarán</td>
                 <td>160–200 min</td>
-                <td><span class="price">€280</span></td>
-                <td><span class="price">€230</span></td>
+                <td><span class="price">€335</span></td>
+                <td><span class="price">€275</span></td>
               </tr>
               <tr>
                 <td><span class="size-label">61 – 70 pies</span></td>
                 <td>Superyate / goleta</td>
                 <td>200–260 min</td>
-                <td><span class="price">€360</span></td>
-                <td><span class="price">€295</span></td>
+                <td><span class="price">€430</span></td>
+                <td><span class="price">€355</span></td>
               </tr>
               <tr>
                 <td><span class="size-label">+ 70 pies</span></td>
@@ -413,7 +456,7 @@
                 <td>A consultar</td>
                 <td colspan="2" style="font-weight: 600; color: var(--text)">
                   <a
-                    href="https://wa.me/573006394572?text=Hola%20Santiago%2C%20tengo%20una%20embarcación%20de%20más%20de%2070%20pies%20y%20necesito%20presupuesto"
+                    href="https://wa.me/34611273268?text=Hola%20Santiago%2C%20tengo%20una%20embarcación%20de%20más%20de%2070%20pies%20y%20necesito%20presupuesto"
                     target="_blank"
                     rel="noopener noreferrer"
                     style="color: var(--gold); font-weight: 700"
@@ -434,9 +477,8 @@
             margin-top: 1.5rem;
           "
         >
-          * Todos los precios + IVA 21%. Catamaranes consultar suplemento de
-          15–20% por superficie de casco adicional. En periodo de incrustación
-          severa puede aplicarse suplemento previo presupuesto.
+          * Catamaranes consultar suplemento de 15–20% por superficie de casco
+          adicional.
         </p>
       </div>
     </section>
@@ -649,7 +691,7 @@
           <div class="pricing-card">
             <div class="pricing-card__tier">Plan Básico</div>
             <div class="pricing-card__size">Embarcaciones hasta 35 pies</div>
-            <div class="pricing-card__price"><span>€</span>95</div>
+            <div class="pricing-card__price"><span>€</span>115</div>
             <div class="pricing-card__note">por mes · facturación mensual</div>
             <ul class="pricing-card__features">
               <li>1 limpieza completa al mes</li>
@@ -659,7 +701,7 @@
               <li>Cancelación con 15 días de aviso</li>
             </ul>
             <a
-              href="https://wa.me/573006394572?text=Hola%20Santiago%2C%20quiero%20contratar%20el%20Plan%20Básico%20de%20suscripción%20mensual%20para%20mi%20embarcación"
+              href="https://wa.me/34611273268?text=Hola%20Santiago%2C%20quiero%20contratar%20el%20Plan%20Básico%20de%20suscripción%20mensual%20para%20mi%20embarcación"
               target="_blank"
               rel="noopener noreferrer"
               class="btn btn--dark w-full"
@@ -673,7 +715,7 @@
             <div class="pricing-card__popular">Más Contratado</div>
             <div class="pricing-card__tier">Plan Completo</div>
             <div class="pricing-card__size">Embarcaciones hasta 50 pies</div>
-            <div class="pricing-card__price"><span>€</span>165</div>
+            <div class="pricing-card__price"><span>€</span>200</div>
             <div class="pricing-card__note">por mes · facturación mensual</div>
             <ul class="pricing-card__features">
               <li>2 limpiezas al mes</li>
@@ -685,7 +727,7 @@
               <li>Cancelación con 15 días de aviso</li>
             </ul>
             <a
-              href="https://wa.me/573006394572?text=Hola%20Santiago%2C%20quiero%20contratar%20el%20Plan%20Completo%20de%20suscripción%20mensual%20para%20mi%20embarcación"
+              href="https://wa.me/34611273268?text=Hola%20Santiago%2C%20quiero%20contratar%20el%20Plan%20Completo%20de%20suscripción%20mensual%20para%20mi%20embarcación"
               target="_blank"
               rel="noopener noreferrer"
               class="btn btn--primary w-full"
@@ -700,7 +742,7 @@
             <div class="pricing-card__size">
               Embarcaciones mayores de 50 pies
             </div>
-            <div class="pricing-card__price"><span>€</span>240</div>
+            <div class="pricing-card__price"><span>€</span>290</div>
             <div class="pricing-card__note">
               por mes · desde · consultar para su eslora exacta
             </div>
@@ -714,7 +756,7 @@
               <li>Cancelación con 15 días de aviso</li>
             </ul>
             <a
-              href="https://wa.me/573006394572?text=Hola%20Santiago%2C%20quiero%20información%20sobre%20el%20Plan%20Premium%20de%20suscripción%20para%20mi%20embarcación"
+              href="https://wa.me/34611273268?text=Hola%20Santiago%2C%20quiero%20información%20sobre%20el%20Plan%20Premium%20de%20suscripción%20para%20mi%20embarcación"
               target="_blank"
               rel="noopener noreferrer"
               class="btn btn--dark w-full"
@@ -964,7 +1006,7 @@
             </div>
 
             <a
-              href="https://wa.me/573006394572?text=Hola%20Santiago%2C%20quiero%20información%20sobre%20el%20servicio%20de%20pulido%20de%20superficies"
+              href="https://wa.me/34611273268?text=Hola%20Santiago%2C%20quiero%20información%20sobre%20el%20servicio%20de%20pulido%20de%20superficies"
               target="_blank"
               rel="noopener noreferrer"
               class="btn btn--primary"
@@ -1254,7 +1296,7 @@
       <div class="container" style="max-width: 680px">
         <span class="section__label">¿Listo para empezar?</span>
         <h2 class="section__title" style="color: white">
-          Presupuesto gratis en 2 horas
+          Pide tu presupuesto gratis
         </h2>
         <div class="divider"></div>
         <p
@@ -1277,7 +1319,7 @@
           "
         >
           <a
-            href="https://wa.me/573006394572?text=Hola%20Santiago%2C%20vi%20vuestra%20web%20y%20quiero%20presupuesto%20para%20limpiar%20el%20casco%20de%20mi%20embarcación"
+            href="https://wa.me/34611273268?text=Hola%20Santiago%2C%20vi%20vuestra%20web%20y%20quiero%20presupuesto%20para%20limpiar%20el%20casco%20de%20mi%20embarcación"
             target="_blank"
             rel="noopener noreferrer"
             class="btn btn--primary"
@@ -1334,10 +1376,10 @@
             <ul class="footer__links">
               <li>
                 <a
-                  href="https://wa.me/573006394572"
+                  href="https://wa.me/34611273268"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >+57 300 639 4572</a
+                  >+34 611 273 268</a
                 >
               </li>
               <li><span>Valencia, España</span></li>
@@ -1359,7 +1401,7 @@
     </footer>
 
     <a
-      href="https://wa.me/573006394572?text=Hola%20Santiago%2C%20vi%20vuestra%20web%20y%20quiero%20información%20sobre%20limpieza%20de%20casco%20para%20mi%20embarcación"
+      href="https://wa.me/34611273268?text=Hola%20Santiago%2C%20vi%20vuestra%20web%20y%20quiero%20información%20sobre%20limpieza%20de%20casco%20para%20mi%20embarcación"
       target="_blank"
       rel="noopener noreferrer"
       class="whatsapp-float"
@@ -1374,5 +1416,20 @@
     </a>
 
     <script src="js/main.js"></script>
+    <!-- Google Translate (controlled by lang selector) -->
+    <div id="google_translate_element" style="display: none"></div>
+    <script>
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "es",
+            includedLanguages: "es,en,fr,it",
+            autoDisplay: false,
+          },
+          "google_translate_element",
+        );
+      }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </body>
 </html>

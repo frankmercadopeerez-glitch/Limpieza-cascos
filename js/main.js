@@ -124,7 +124,7 @@
       if (mensaje) text += `\n\n${mensaje}`;
 
       window.open(
-        `https://wa.me/573006394572?text=${encodeURIComponent(text)}`,
+        `https://wa.me/34611273268?text=${encodeURIComponent(text)}`,
         "_blank",
         "noopener,noreferrer",
       );
@@ -179,4 +179,50 @@
       plan.classList.add("active");
     });
   });
+
+  /* ---- LANGUAGE SELECTOR ---- */
+  const langBtn = document.getElementById("langBtn");
+  const langDropdown = document.getElementById("langDropdown");
+  const activeLangEl = document.getElementById("activeLang");
+
+  if (langBtn && langDropdown) {
+    // Detect current language from googtrans cookie
+    const getGoogLang = () => {
+      const match = document.cookie.match(/googtrans=\/es\/([a-z]{2})/i);
+      return match ? match[1].toUpperCase() : "ES";
+    };
+    const cur = getGoogLang();
+    if (activeLangEl) activeLangEl.textContent = cur;
+    document.querySelectorAll(".lang-option").forEach((opt) => {
+      if (opt.dataset.lang.toUpperCase() === cur) opt.classList.add("active");
+    });
+
+    langBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      langDropdown.classList.toggle("open");
+    });
+    document.addEventListener("click", () =>
+      langDropdown.classList.remove("open"),
+    );
+
+    document.querySelectorAll(".lang-option").forEach((opt) => {
+      opt.addEventListener("click", (e) => {
+        e.preventDefault();
+        const lang = opt.dataset.lang;
+        const host = location.hostname;
+        if (lang === "es") {
+          document.cookie =
+            "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+          document.cookie =
+            "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" +
+            host;
+        } else {
+          document.cookie = "googtrans=/es/" + lang + "; path=/";
+          document.cookie =
+            "googtrans=/es/" + lang + "; path=/; domain=" + host;
+        }
+        location.reload();
+      });
+    });
+  }
 })();
