@@ -47,7 +47,6 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  overflow-x: hidden;
 }
 body {
   font-family: "Inter", system-ui, sans-serif;
@@ -55,7 +54,6 @@ body {
   background: var(--white);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
 }
 img {
   max-width: 100%;
@@ -1364,6 +1362,9 @@ body {
   box-sizing: border-box !important;
   white-space: normal !important;
 }
+.contact__form-area {
+  padding: 3rem;
+}
 .form-group {
   margin-bottom: 1.5rem;
 }
@@ -1912,9 +1913,6 @@ footer {
   }
   .contact-grid {
     grid-template-columns: 1fr;
-    width: 100%;
-    box-shadow: none;
-    border-radius: 0;
   }
   .why-grid {
     grid-template-columns: 1fr;
@@ -1967,6 +1965,15 @@ footer {
   .contact__info {
     min-width: 0;
     overflow: hidden;
+  }
+  .contact-grid {
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: hidden;
+  }
+  #contacto {
+    overflow-x: hidden;
   }
   footer {
     padding: 2.5rem 0 1.5rem;
