@@ -47,6 +47,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 body {
   font-family: "Inter", system-ui, sans-serif;
@@ -54,6 +55,7 @@ body {
   background: var(--white);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 img {
   max-width: 100%;
@@ -1354,8 +1356,13 @@ body {
   color: rgba(255, 255, 255, 0.85);
   font-weight: 400;
 }
-.contact__form-area {
-  padding: 3rem;
+.form-submit {
+  display: flex !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+  white-space: normal !important;
 }
 .form-group {
   margin-bottom: 1.5rem;
@@ -1955,6 +1962,11 @@ footer {
   .contact__form-area {
     padding: 2rem 1.25rem;
     overflow: hidden;
+    min-width: 0;
+  }
+  .contact__info {
+    min-width: 0;
+    overflow: hidden;
   }
   footer {
     padding: 2.5rem 0 1.5rem;
@@ -2035,12 +2047,16 @@ footer {
   .btn {
     justify-content: center;
   }
+  .contact-form {
+    width: 100%;
+  }
   .contact-form .btn[type="submit"] {
     display: flex;
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
     box-shadow: none;
+    white-space: normal;
   }
   .whatsapp-float__label {
     display: none;
