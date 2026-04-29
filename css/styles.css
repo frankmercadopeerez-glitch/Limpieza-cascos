@@ -207,6 +207,12 @@ ul {
   align-items: center;
   justify-content: space-between;
 }
+.nav__right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
 
 .logo {
   display: flex;
@@ -223,16 +229,16 @@ ul {
 .logo__name {
   color: white;
   font-family: "Cormorant Garant", serif;
-  font-size: 1.35rem;
+  font-size: 1.55rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.12em;
   line-height: 1;
 }
 .logo__sub {
   color: var(--gold-lt);
-  font-size: 0.58rem;
+  font-size: 0.6rem;
   font-weight: 600;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   margin-top: 3px;
 }
@@ -363,6 +369,54 @@ body {
   border: none;
   padding: 4px;
 }
+
+/* Mobile language selector */
+.mobile-lang {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+.mobile-lang__btn {
+  font-family: "Inter", sans-serif !important;
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.55) !important;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+.mobile-lang__btn:hover,
+.mobile-lang__btn.active {
+  color: var(--gold-lt) !important;
+  border-color: var(--gold);
+  background: rgba(196, 154, 26, 0.1);
+}
+
+/* Mobile language selector */
+.mobile-lang {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+.mobile-lang__btn {
+  font-family: "Inter", sans-serif !important;
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.55) !important;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+.mobile-lang__btn:hover,
+.mobile-lang__btn.active {
+  color: var(--gold-lt) !important;
+  border-color: var(--gold);
+  background: rgba(196, 154, 26, 0.1);
+}
 .nav__toggle span {
   display: block;
   width: 24px;
@@ -489,6 +543,8 @@ body {
   height: 7px;
   border-radius: 50%;
   background: var(--gold);
+  flex-shrink: 0;
+  align-self: center;
   animation: pulseGlow 2s infinite;
 }
 @keyframes pulseGlow {
@@ -1368,13 +1424,19 @@ body {
   background: transparent;
   border: none;
   border-left: 1.5px solid var(--gray-200);
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0.5rem;
   font-family: "Inter", sans-serif;
   font-size: 0.82rem;
   font-weight: 700;
   color: var(--text);
   cursor: pointer;
   flex-shrink: 0;
+  width: 72px;
+  min-width: 72px;
+  max-width: 72px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   outline: none;
   appearance: none;
   -webkit-appearance: none;
@@ -1843,6 +1905,9 @@ footer {
   }
   .contact-grid {
     grid-template-columns: 1fr;
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0;
   }
   .why-grid {
     grid-template-columns: 1fr;
@@ -1869,8 +1934,50 @@ footer {
   .nav__cta {
     display: none;
   }
+  .lang-selector {
+    display: flex;
+    position: static;
+  }
+  .lang-dropdown {
+    position: absolute;
+    right: 0;
+    left: auto;
+  }
   .nav__toggle {
     display: flex;
+  }
+  .hero__badge {
+    white-space: normal;
+    text-align: center;
+    justify-content: center;
+    max-width: 280px;
+  }
+  .contact__form-area {
+    padding: 2rem 1.25rem;
+    overflow: hidden;
+  }
+  footer {
+    padding: 2.5rem 0 1.5rem;
+  }
+  .footer__brand {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  }
+  .footer__col-title {
+    margin-bottom: 0.75rem;
+  }
+  .footer__links {
+    gap: 0.4rem;
+  }
+  .footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding-top: 1.25rem;
+    font-size: 0.75rem;
+  }
+  .footer__legal {
+    gap: 1rem;
   }
   .steps-grid {
     grid-template-columns: 1fr;
@@ -1879,8 +1986,8 @@ footer {
     display: none;
   }
   .footer__grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
   }
   .form-grid-2,
   .checkbox-grid {
@@ -1889,9 +1996,18 @@ footer {
   .pricing-table {
     font-size: 0.8rem;
   }
+  /* Ocultar columna Descripción en móvil para que la tabla quepa sin scroll */
+  .pricing-table th:nth-child(2),
+  .pricing-table td:nth-child(2) {
+    display: none;
+  }
   .pricing-table th,
   .pricing-table td {
-    padding: 0.75rem 0.75rem;
+    padding: 0.75rem 0.6rem;
+  }
+  .checkbox-item {
+    justify-content: flex-start;
+    padding-left: 1rem;
   }
   /* Grids de 2 columnas → 1 columna en móvil */
   .grid-2col,
@@ -1918,6 +2034,13 @@ footer {
   }
   .btn {
     justify-content: center;
+  }
+  .contact-form .btn[type="submit"] {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    box-shadow: none;
   }
   .whatsapp-float__label {
     display: none;
