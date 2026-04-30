@@ -191,7 +191,7 @@
       const match = document.cookie.match(/googtrans=\/es\/([a-z]{2})/i);
       return match ? match[1].toUpperCase() : "ES";
     };
-    const flagMap = { ES: "🇪🇸", EN: "🇬🇧", FR: "🇫🇷", IT: "🇮🇹" };
+    const flagMap = { ES: "🇪🇸", EN: "🇬🇧", FR: "🇫🇷", IT: "🇮🇹", DE: "🇩🇪" };
     const cur = getGoogLang();
     if (activeLangEl)
       activeLangEl.textContent = (flagMap[cur] || "") + " " + cur;
